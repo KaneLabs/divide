@@ -12,4 +12,6 @@ Current build instructions:
     
     knex migrate:latest
   
+  Set your environment variables
+  
   Get to work!
