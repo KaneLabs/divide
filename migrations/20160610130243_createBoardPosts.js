@@ -10,9 +10,9 @@ exports.up = function(knex, Promise) {
     table.integer('disrespect').defaultTo(0);
     table.string('oauthtoken').unique();
     table.boolean('isgod').defaultTo(false);
-  })
+  });
 };
 
 exports.down = function(knex, Promise) {
-  return schema.dropTable('users');
+  return knex.schema.dropTable('users');
 };
