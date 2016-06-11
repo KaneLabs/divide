@@ -51,6 +51,15 @@ exports.up = function(knex, Promise) {
       table.integer('postid').references('id').inTable('boardposts');
       table.integer('userid').references('id').inTable('users');
       table.text('body');
+    }),
+    knex.schema.createTable('images', function(table) {
+      table.increments().primary();
+      table.string('awsimagesurl');
+    }),
+    knex.schema.createTable('images_on_post', function(table) {
+      table.increments().primary();
+      table.integer('boardpostid').references('id').inTable('boardposts');
+      table.integer('imageid').references('id').inTable('images');
     })
   ])
 };
