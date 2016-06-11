@@ -54,7 +54,7 @@ exports.up = function(knex, Promise) {
     }),
     knex.schema.createTable('images', function(table) {
       table.increments().primary();
-      table.string('awsimagesurl');
+      table.string('originalname');
     }),
     knex.schema.createTable('images_on_post', function(table) {
       table.increments().primary();
@@ -68,8 +68,10 @@ exports.down = function(knex, Promise) {
   return Promise.all([
     knex.raw('drop table if exists users cascade'),
     knex.raw('drop table if exists tribes cascade'),
+    knex.raw('drop table if exists images cascade'),
     knex.raw('drop table if exists keywords cascade'),
     knex.raw('drop table if exists boardposts cascade'),
+    knex.raw('drop table if exists images_on_post cascade'),
     knex.raw('drop table if exists users_in_tribes cascade'),
     knex.raw('drop table if exists keywords_on_posts cascade'),
     knex.raw('drop table if exists board_post_comments cascade')
