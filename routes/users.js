@@ -76,24 +76,5 @@ function redirectSignedIn(req, res, next){
   res.redirect('/')
 }
 
-router.get('/:username', function(req, res, next){
-  res.render(':username');
-});
-
-rouer.get('/theboard', function(req, res, next){
-  res.render('theboard')
-});
-
-router.post('/theboard', function(req, res, next){
-  res.send('post to the board!');
-});
-
-router.get('/:tribe', function(req, res, next){
-  res.render(':tribe');
-});
-
-router.get('/leaderboards', function(req, res, next){
-  res.render('leaderboards')
-});
 
 module.exports = router;

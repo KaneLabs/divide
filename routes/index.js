@@ -92,4 +92,25 @@ router.post('/', upload.single('form-name-and-multer-name-must-match'), function
 
 });
 
+
+router.get('/:username', function(req, res, next){
+  res.render(':username');
+});
+
+router.get('/theboard', function(req, res, next){
+  res.render('theboard')
+});
+
+router.post('/theboard', function(req, res, next){
+  res.send('post to the board!');
+});
+
+router.get('/:tribe', function(req, res, next){
+  res.render(':tribe');
+});
+
+router.get('/leaderboards', function(req, res, next){
+  res.render('leaderboards')
+});
+
 module.exports = router;
