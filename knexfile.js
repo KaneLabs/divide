@@ -1,4 +1,4 @@
-// Update with your config settings.
+require('dotenv').config()
 
 module.exports = {
 
@@ -8,16 +8,16 @@ module.exports = {
   },
 
   staging: {
-    client: 'postgresql',
+    client: 'postgres',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: 'dividedb.c4sisckqzvvb.us-east-1.rds.amazonaws.com:5432',
+      user:     'dividedb',
+      password: 'vdXq*#*YVNB5'
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
+    // pool: {
+    //   min: 2,
+    //   max: 10
+    // },
     migrations: {
       tableName: 'knex_migrations'
     }
