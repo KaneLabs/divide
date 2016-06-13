@@ -1,13 +1,24 @@
 extends layout
 
 block content
-
-  h1 #{username} Profile
-  #profilePic.col
-  a.h3 CONNECT with #{username}
-  #userProfile.col
-  #myConnections
-    h4 View my connections
-  #myPosts
-    h1 View my posts
-    a.button
+  
+  #profilePic
+  #profile
+    h4 #{username}
+    h4 Respect
+    h4#tribe Tribes:
+    p
+      li Location:
+      li Interests:
+  a(href=)h5 Connect with #{username}
+  #connect
+    h5 My Connections
+    .con
+    .con
+    .con
+    .con
+    .con
+    .con
+  #post
+    h2 My Posts
+    p #{username.posts}
